@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-import { IconButton } from "../../../../components";
-import MoonIcon from "../../../../assets/icons/icon-moon.svg";
-import SunIcon from "../../../../assets/icons/icon-sun.svg";
+import { Icon, IconButton } from "../../../../components";
 
 const currentTheme = (localStorage.getItem("theme") || "light") as
   | "light"
@@ -28,13 +26,13 @@ export const ToggleSwitch = () => {
       {theme === "dark" ? (
         <IconButton
           aria-label="Switch to light mode"
-          icon={<img src={SunIcon} alt="sun icon" />}
+          icon={<Icon name="sun"/>}
           onClick={() => handleToggle("light")}
         />
       ) : (
         <IconButton
           aria-label="Switch to dark mode"
-          icon={<img src={MoonIcon} alt="moon icon" />}
+          icon={<Icon name="moon"/>}
           onClick={() => handleToggle("dark")}
         />
       )}
