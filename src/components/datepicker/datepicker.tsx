@@ -5,7 +5,7 @@ import styles from "./datepicker.module.scss";
 import { Icon } from "../icon/icon";
 
 export const DatePicker = (props: DatePickerProps) => {
-  const { label, name, errorMessage, className, ...restProps } = props;
+  const { label, name, errorMessage, className } = props;
 
   return (
     <div className={clsx(styles.form_field, className)}>
@@ -14,7 +14,7 @@ export const DatePicker = (props: DatePickerProps) => {
       </label>
       <div className={styles.wrapper}>
         <BaseDatePicker
-          {...restProps}
+          selectsRange={undefined}
           id={name}
           name={name}
           dateFormat="d MMM yyyy"
