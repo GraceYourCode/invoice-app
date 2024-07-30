@@ -5,9 +5,12 @@ import { Link } from "react-router-dom";
 export const Header = () => {
   return (
     <header className={styles.header}>
-      <Link to={"/"} className={styles.company_logo_container}>
-        <img src="/assets/logo/logo.svg" alt="logo icon" />
-      </Link>
+      <div className="flex items-center gap-6 h-full">
+        <Link to={"/"} className={styles.company_logo_container}>
+          <img src="/assets/logo/logo.svg" alt="logo icon" />
+        </Link>
+        <p className="text-2xl sm:text-3xl font-bold">DigiBills</p>
+      </div>
 
       <ToggleSwitch />
 
